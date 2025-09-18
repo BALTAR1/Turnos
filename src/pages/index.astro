@@ -1,0 +1,37 @@
+---
+import FormAgendar from '../components/FormAgendar.jsx';
+import '../styles/global.css';
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Agenda tu Turno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="min-h-screen font-sans bg-gray-50">
+  <header class="bg-blue-900 text-white py-4 px-4 text-center rounded-b-xl shadow-sm mb-8">
+      <div class="logo mb-1">
+        <h1 class="text-2xl font-bold tracking-tight">AgendApp</h1>
+      </div>
+      <nav class="mt-2">
+        <ul class="flex flex-wrap justify-center gap-6 text-base font-medium">
+          <li><a href="#inicio" class="hover:underline transition">Inicio</a></li>
+          <li><a href="#contacto" class="hover:underline transition">Contacto</a></li>
+          <li><a href="/login" class="bg-white text-blue-700 px-3 py-1 rounded shadow hover:bg-blue-50 transition">Admin</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="flex flex-col items-center justify-center px-2">
+      <section id="inicio" class="w-full flex justify-center">
+        <FormAgendar client:load />
+      </section>
+    </main>
+
+    <footer id="contacto" class="text-center mt-16 text-sm text-gray-400 py-6">
+      <p>© 2025 Todos los derechos reservados | <a href="mailto:contacto@empresa.com" class="text-blue-600 hover:underline">Contáctanos</a></p>
+    </footer>
+  </body>
+</html>
